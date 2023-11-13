@@ -1,0 +1,26 @@
+.navBar {
+  background-color: #001b79;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.navHead {
+  width: 50%;
+}
+.NavItemCont {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+.Navbuttons {
+  padding: 10px;
+  background-color: transparent;
+  font-size: 15px;
+  border: 0px;
+  color: white;
+}
+.navInput {
+  width: 250px;
+  border-radius: 5px;
+}

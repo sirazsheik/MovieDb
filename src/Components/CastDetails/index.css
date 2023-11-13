@@ -1,0 +1,15 @@
+.castImg {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px;
+  color: white;
+  background-color: black;
+}
+.castDImg {
+  width: 100px;
+  border-radius: 5px;
+}

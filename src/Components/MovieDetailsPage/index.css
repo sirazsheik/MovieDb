@@ -1,0 +1,6 @@
+.castCont {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+}
