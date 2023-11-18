@@ -13,7 +13,7 @@ const MovieItems = props => {
           alt="h"
           className="cardImg"
         />
-        <p>{details.title}</p>
+        <h1>{details.title}</h1>
         <p>{details.vote_average}</p>
         <button className="cardButton" type="button">
           <Link to={`/movie/${details.id}`}>View Details</Link>
