@@ -6,17 +6,24 @@ class Navbar extends Component {
   state = {a: ''}
 
   change = event => {
+    const {a} = this.state
+    const {history} = this.props
     this.setState({a: event.target.value})
+    history.push('/search')
   }
 
   sear = () => {
     const {a} = this.state
     const {history} = this.props
+
+    console.log(history)
     history.push(`/search/${a}`)
+    this.setState({a: ''})
   }
 
   render() {
-    const a = this.state
+    const {a} = this.state
+
     return (
       <nav>
         <div className="navBar">
@@ -43,10 +50,11 @@ class Navbar extends Component {
             </div>
             <div>
               <input
-                type="input"
+                type="text"
                 placeholder="Search"
                 className="navInput"
-                onKeyDown={this.change}
+                onChange={this.change}
+                value={a}
               />
               <button type="button" onClick={this.sear}>
                 Search

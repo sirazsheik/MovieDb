@@ -3,13 +3,16 @@ import './index.css'
 
 const MovieItems = props => {
   const {details} = props
-  console.log(details)
 
   return (
     <li className="cardCont">
       <div>
         <img
-          src={`https://image.tmdb.org/t/p/original/${details.poster_path}`}
+          src={
+            details.poster_path === 'null'
+              ? ''
+              : `https://image.tmdb.org/t/p/w500${details.poster_path}`
+          }
           alt="h"
           className="cardImg"
         />

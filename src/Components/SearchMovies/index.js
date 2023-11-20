@@ -12,13 +12,15 @@ class SearchMovie extends Component {
   }
 
   getData = async () => {
-    const {match} = this.props
+    const {match, history} = this.props
     const {params} = match
     const {search} = params
+    console.log(search)
     const response = await fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=9d5b6478a7eff84ebcfcd18ade66697d&language=en-US&query=${search}&page=1`,
     )
     const data = await response.json()
+
     this.setState({list: data, isLoading: false})
   }
 
